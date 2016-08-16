@@ -34,4 +34,15 @@ if ( videoScreencastLinksTop === videoScreencastLinksBottom ) {
 } else {
 	console.error('they are !===');
 }
-// ok, they are equal, let's move on!
+
+// Parsing the URLS
+
+var urls = [];
+
+for ( j=0; j < 10; j++ ) {
+	urls += "https://css-tricks.com/video-screencasts/page/" + j + "/";
+}
+
+console.log(urls);
+
+// like this I can't split(", ");
