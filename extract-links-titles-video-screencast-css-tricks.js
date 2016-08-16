@@ -40,9 +40,8 @@ if ( videoScreencastLinksTop === videoScreencastLinksBottom ) {
 var urls = [];
 
 for ( j=0; j < 10; j++ ) {
-	urls += "https://css-tricks.com/video-screencasts/page/" + j + "/";
+	// urls += "https://css-tricks.com/video-screencasts/page/" + j + "/" + ", ";
+	urls.push("https://css-tricks.com/video-screencasts/page/" + j + "/");
 }
 
 console.log(urls);
-
-// like this I can't split(", ");
