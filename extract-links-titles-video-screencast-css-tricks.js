@@ -36,6 +36,7 @@ if ( videoScreencastLinksTop === videoScreencastLinksBottom ) {
 }
 
 // Parsing the URLS
+// (this array will be used later when calling all pages via Ajax call)
 
 var urls = [];
 
@@ -45,3 +46,21 @@ for ( j=0; j < 10; j++ ) {
 }
 
 console.log(urls);
+
+// Narrow down from the article content to the link
+
+var videoContainer = document.getElementsByClassName("video-card group")[0];
+var infoContainer = videoContainer.getElementsByClassName("video-info")[0];
+var allLinks = infoContainer.getElementsByTagName("a");
+
+for ( var g=0; g < allLinks.lenght; g++ ) {
+  var link = allLinks[g];
+  //do something next
+}
+
+var text = allLinks[g].innerHTML; // just the title
+var link = allLinks[g]; // and the video link
+
+console.log(text + link);
+
+// Next, output all the liks in the array
