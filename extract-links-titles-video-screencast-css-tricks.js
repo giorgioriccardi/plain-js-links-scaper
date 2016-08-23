@@ -67,7 +67,7 @@ function singleVideoLink() {
 	  console.log(articles[s]);
 	}
 	 
-	var videoContainer = document.getElementsByClassName("video-card group")[0]; // this array triggers an error! we either run the array on article or on the video-card group 
+	var videoContainer = document.getElementsByClassName("video-card group")[0];
 	var infoContainer = videoContainer.getElementsByClassName("video-info")[0];
 	var videoLink = infoContainer.getElementsByTagName("a");
 
@@ -86,4 +86,4 @@ function singleVideoLink() {
 
 singleVideoLink();
 
-// Next, output all the liks in the array
+// Next, nicely output all the liks in the array, but maybe before let's petch all the other pages?!
