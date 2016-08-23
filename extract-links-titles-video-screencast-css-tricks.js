@@ -61,9 +61,9 @@ for ( index = 0; index < pageUrls.length; index++ ) {
 
 // Narrow down from the article content to the video link
 function loopVideos() { 
-  var x = document.getElementsByClassName("video-card group");
-  for( var s = 0; s < x.length; s++ ){
-    var infoContainer = x[s].getElementsByClassName("video-info")[0];
+  var articles = document.getElementsByTagName("article");
+  for( var s = 0; s < articles.length; s++ ){
+    var infoContainer = articles[s].getElementsByClassName("video-info")[0];
 	var videoLink = infoContainer.getElementsByTagName("a");
 
 	var text = videoLink[0].innerHTML; // just the title
@@ -72,6 +72,11 @@ function loopVideos() {
 	//console.log(text + link);
 	console.log(text);
 	console.log(link);
+
+	// in case we wanna iterate through all the videoLink object elements:
+	for (objectElements in videoLink) {
+      console.info("This link object key is: " + objectElements + ", value is: " + videoLink[objectElements] + ".");
+    }
   }
 }
 
