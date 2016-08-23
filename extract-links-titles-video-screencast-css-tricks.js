@@ -60,30 +60,21 @@ for ( index = 0; index < pageUrls.length; index++ ) {
 
 
 // Narrow down from the article content to the video link
-function singleVideoLink() {
-
-	var articles = document.getElementsByTagName("article");
-	for( var s = 0; s < articles.length; s++ ){
-	  console.log(articles[s]);
-	}
-	 
-	var videoContainer = document.getElementsByClassName("video-card group")[0];
-	var infoContainer = videoContainer.getElementsByClassName("video-info")[0];
+function loopVideos() { 
+  var x = document.getElementsByClassName("video-card group");
+  for( var s = 0; s < x.length; s++ ){
+    var infoContainer = x[s].getElementsByClassName("video-info")[0];
 	var videoLink = infoContainer.getElementsByTagName("a");
 
-	for ( var g = 0; g < videoLink.lenght; g++ ) {
-	  // console.log(videoLink[g]);
-	}
-
-	var text = videoLink[g].innerHTML; // just the title
-	var link = videoLink[g]; // and the video link
+	var text = videoLink[0].innerHTML; // just the title
+	var link = videoLink[0]; // and the video link
 
 	//console.log(text + link);
 	console.log(text);
 	console.log(link);
-	  
+  }
 }
 
-singleVideoLink();
+loopVideos();
 
 // Next, nicely output all the liks in the array, but maybe before let's petch all the other pages?!
